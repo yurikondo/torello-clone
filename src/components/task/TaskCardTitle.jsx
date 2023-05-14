@@ -17,11 +17,24 @@ export const TaskCardTitle = () => {
     setIsClick(false);
   };
 
+  const handleBlur = () => {
+    setIsClick(false);
+  };
+
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleClick} className="taskCardTitleInputArea">
       {isClick ? (
         <form onSubmit={handleSubmit}>
-          <input type="text" onChange={handleChange}></input>
+          {/* onBlurは設定した要素以外のところをクリックした時 */}
+          <input
+            className="taskCardTitleInput"
+            autoFocus
+            type="text"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={inputCardTitle}
+            maxLength="10"
+          ></input>
         </form>
       ) : (
         <h3>{inputCardTitle}</h3>
