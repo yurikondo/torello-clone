@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TaskCardTitle } from "./TaskCardTitle";
 import { TaskCardDeleteBtn } from "./button/TaskCardDeleteBtn";
 import { TaskAddInput } from "./input/TaskAddInput";
@@ -17,7 +17,7 @@ export const TaskCard = () => {
         taskList={taskList}
         setTaskList={setTaskList}
       />
-      <Tasks />
+      <Tasks inputText={inputText} taskList={taskList} />
     </div>
   );
 };
