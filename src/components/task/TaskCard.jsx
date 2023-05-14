@@ -5,11 +5,18 @@ import { TaskAddInput } from "./input/TaskAddInput";
 import { Tasks } from "./Tasks";
 
 export const TaskCard = () => {
+  const [inputText, setInputText] = useState("");
+  const [taskList, setTaskList] = useState([]);
   return (
     <div className="taskCard">
       <TaskCardTitle />
       <TaskCardDeleteBtn />
-      <TaskAddInput />
+      <TaskAddInput
+        inputText={inputText}
+        setInputText={setInputText}
+        taskList={taskList}
+        setTaskList={setTaskList}
+      />
       <Tasks />
     </div>
   );
