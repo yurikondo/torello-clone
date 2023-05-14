@@ -11,7 +11,14 @@ export const TaskAddInput = ({
     if (inputText === "") return;
 
     // カードを追加する
-    setTaskList([...taskList, { id: taskList.length, text: inputText }]);
+    setTaskList([
+      ...taskList,
+      {
+        id: taskList.length,
+        draggableId: `task${taskList.length}`,
+        text: inputText,
+      },
+    ]);
     setInputText("");
   };
 
