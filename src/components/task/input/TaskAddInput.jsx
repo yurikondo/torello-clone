@@ -11,8 +11,6 @@ export const TaskAddInput = ({
     // カードを追加する
     setTaskList([...taskList, { text: inputText }]);
     setInputText("");
-    console.log(...taskList);
-    console.log(inputText);
   };
 
   const handleChange = (e) => {
