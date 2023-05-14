@@ -17,3 +17,10 @@ header {
   margin-bottom: 50px;
   background-color: rgb(102, 94, 74);
 }
+
+.app {
+  background: url(../src/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
