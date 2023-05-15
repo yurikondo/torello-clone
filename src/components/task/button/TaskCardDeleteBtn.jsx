@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export const TaskCardDeleteBtn = () => {
   return (
-    <div>TaskCardDeleteBtn</div>
-  )
-}
+    <div>
+      <button className="taskCardDeleteBtn">
+        <i className="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+  );
+};
