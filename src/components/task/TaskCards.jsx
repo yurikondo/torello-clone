@@ -26,7 +26,7 @@ const TaskCards = () => {
       <Droppable droppableId="droppable" direction="horizontal">
         {(provided) => (
           <div
-            className="taskCarsArea"
+            className="taskCardsArea"
             {...provided.droppableProps}
             ref={provided.innerRef}
           >
