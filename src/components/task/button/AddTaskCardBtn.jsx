@@ -1,12 +1,12 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-export const AddTaskCardBtn = ({ taskCardLists, setTaskCardLists }) => {
+export const AddTaskCardBtn = ({ taskCardsList, setTaskCardsList }) => {
   const taskCardId = uuid();
 
   const AddTaskCard = () => {
-    setTaskCardLists([
-      ...taskCardLists,
+    setTaskCardsList([
+      ...taskCardsList,
       {
         id: taskCardId,
         draggableId: `item${taskCardId}`,

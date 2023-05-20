@@ -3,18 +3,23 @@ import { TaskCard } from "./TaskCard";
 import { AddTaskCardBtn } from "./button/AddTaskCardBtn";
 
 const TaskCards = () => {
-  const [taskCardLists, setTaskCardLists] = useState([
+  const [taskCardsList, setTaskCardsList] = useState([
     { id: 0, draggableId: "item0" },
   ]);
 
   return (
     <div className="taskCarsArea">
-      {taskCardLists.map((taskCardList) => (
-        <TaskCard key={taskCardList.id} />
+      {taskCardsList.map((taskCard) => (
+        <TaskCard
+          key={taskCard.id}
+          taskCardsList={taskCardsList}
+          setTaskCardsList={setTaskCardsList}
+          taskCard={taskCard}
+        />
       ))}
       <AddTaskCardBtn
-        taskCardLists={taskCardLists}
-        setTaskCardLists={setTaskCardLists}
+        taskCardsList={taskCardsList}
+        setTaskCardsList={setTaskCardsList}
       />
     </div>
   );
